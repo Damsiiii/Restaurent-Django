@@ -1,0 +1,11 @@
+{% extends 'reservations/base.html' %}
+{% block title %}Booking Details{% endblock %}
+{% block content %}
+<h1>Reservation Details</h1>
+<ul class="list-group">
+    <li class="list-group-item">👤 Name: {{ reservation.name }}</li>
+    <li class="list-group-item">📞 Phone: {{ reservation.phone }}</li>
+    <li class="list-group-item">🍽 Table: {{ reservation.table_number }}</li>
+    <li class="list-group-item">🕒 Time: {{ reservation.date_time }}</li>
+</ul>
+{% endblock %}

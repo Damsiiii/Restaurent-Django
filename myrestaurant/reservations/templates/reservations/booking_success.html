@@ -1,0 +1,12 @@
+{% extends 'reservations/base.html' %}
+{% block title %}Booking Confirmed{% endblock %}
+{% block content %}
+<div class="text-center">
+    <h1>Thank you, {{ reservation.name }}!</h1>
+    <p>Your booking is confirmed for Table {{ reservation.table_number }} at {{ reservation.date_time }}.</p>
+    <p><strong>Scan your QR code below:</strong></p>
+    <img src="data:image/png;base64,{{ qr_code }}" alt="QR Code" class="img-thumbnail mt-2" style="max-width: 250px;">
+    <br>
+    <a href="/" class="btn btn-secondary mt-3">Return Home</a>
+</div>
+{% endblock %}

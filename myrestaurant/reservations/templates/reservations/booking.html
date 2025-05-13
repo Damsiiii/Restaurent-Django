@@ -1,0 +1,10 @@
+{% extends 'reservations/base.html' %}
+{% block title %}Book a Table{% endblock %}
+{% block content %}
+<h1 class="mb-4 text-center">Book a Table</h1>
+<form method="post" class="border p-4 rounded shadow bg-white">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Submit Reservation</button>
+</form>
+{% endblock %}
